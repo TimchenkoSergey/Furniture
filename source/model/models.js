@@ -7,6 +7,7 @@ import AwardSchema         from './schemes/award';
 import EmployeeSchema      from './schemes/employee';
 import NewsSchema          from './schemes/news';
 import ProductSchema       from './schemes/product';
+import OrderSchema         from './schemes/order';
 
 const models = {
     SocialWebLink : mongoose.model('SocialWebLink', SocialWebLinkSchema),
@@ -14,7 +15,8 @@ const models = {
     Award         : mongoose.model('Award', AwardSchema),
     Employee      : mongoose.model('Employee', EmployeeSchema),
     News          : mongoose.model('News', NewsSchema),
-    Product       : mongoose.model('Product', ProductSchema)
+    Product       : mongoose.model('Product', ProductSchema),
+    Order         : mongoose.model('Order', OrderSchema)
 };
 
 export default models;

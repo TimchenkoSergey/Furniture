@@ -88,6 +88,7 @@ const info = {
             material    : 'Glass and Metal',
             type        : 'Suspension lamp',
             designer    : 'David Design',
+            price       : 120,
             description : [
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
@@ -100,6 +101,7 @@ const info = {
             type        : 'potter',
             material    : 'plastic',
             designer    : 'David Design',
+            price       : 140,
             description : [
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
@@ -112,6 +114,7 @@ const info = {
             mainImgSrc  : '/public/img/product3.png',
             type        : 'Armchairs',
             designer    : 'PATRICIA URQUIOLA',
+            price       : 230,
             description : [
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
@@ -124,6 +127,7 @@ const info = {
             mainImgSrc: '/public/img/product4.png',
             type: 'chairs',
             designer: 'philippe starck',
+            price       : 1230,
             description: [
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
@@ -136,6 +140,7 @@ const info = {
             mainImgSrc  : '/public/img/product5.png',
             type        : 'ARMchairs',
             designer    : 'Patrick Norguet',
+            price       : 340,
             description : [
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
@@ -148,6 +153,7 @@ const info = {
             mainImgSrc  : '/public/img/product6.png',
             type        : 'armchairs',
             designer    : 'Cuno Frommherz',
+            price       : 240,
             description : [
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
@@ -160,6 +166,7 @@ const info = {
             mainImgSrc  : '/public/img/product7.png',
             type        : 'armchairs',
             designer    : 'Gianfranco Frattini',
+            price       : 450,
             description : [
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
@@ -171,6 +178,7 @@ const info = {
             material    : 'metal',
             mainImgSrc  : '/public/img/product8.png',
             type        : 'Alessi',
+            price       : 340,
             designer    : 'Piero Lissoni',
             description : [
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
@@ -182,7 +190,7 @@ const info = {
 
 function fillDb() {
     let promises = [];
-    for (let i = 0; i < info.awards.length; i++) {
+    /*for (let i = 0; i < info.awards.length; i++) {
         promises.push(model.create(models.Award, info.awards[i]));
     }
 
@@ -196,7 +204,7 @@ function fillDb() {
 
     for (let i = 0; i < info.news.length; i++) {
         promises.push(model.create(models.News, info.news[i]));
-    }
+    }*/
 
     for (let i = 0; i < info.products.length; i++) {
         promises.push(model.create(models.Product, info.products[i]));

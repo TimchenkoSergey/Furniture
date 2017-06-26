@@ -25,7 +25,7 @@ async function createApp() {
         });
 
         await routes(app);
-        //await fillDb();
+        await fillDb();
     }
     catch (err) {
         log.error(err);
