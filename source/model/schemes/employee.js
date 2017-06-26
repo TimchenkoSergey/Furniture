@@ -6,6 +6,7 @@ const EmployeeSchema = new mongoose.Schema({
     name     : String,
     lastName : String,
     position : String,
+    photo    : String,
     links    : [ SocialWebLinkSchema ]
 });
 

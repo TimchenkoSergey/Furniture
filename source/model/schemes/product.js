@@ -6,6 +6,7 @@ const ProductSchema = new mongoose.Schema({
     mainImgSrc  : String,
     type        : String,
     designer    : String,
+    material    : String,
     description : [ String ]
 });
 
