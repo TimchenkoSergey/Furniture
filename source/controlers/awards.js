@@ -4,15 +4,15 @@ import getLogger from '../libs/logger';
 
 const log = getLogger(module);
 
-export default menuController;
+export default awardsController;
 
-async function menuController(req, res, next) {
+async function awardsController(req, res, next) {
     try {
-        log.debug(`Received a GET request for a menu`);
+        log.debug(`Received a GET request for a awards`);
 
-        const menu = await model.find(models.MenuItem, {});
+        const awards = await model.find(models.Award, {});
 
-        res.json(menu);
+        res.json(awards);
     }
     catch (err) {
         next(err);
