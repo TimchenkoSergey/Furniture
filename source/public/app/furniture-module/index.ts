@@ -1,5 +1,5 @@
 //services
-export * from './services/data.service';
+export * from './services/menu.service';
 //components
 export * from './components/about-us/about-us.component';
 export * from './components/footer/footer.component';
@@ -14,6 +14,7 @@ export * from './components/basket/basket.component';
 export * from './components/order/order.component';
 //classes
 export * from './classes/News';
+export * from './classes/Menu';
 export * from './classes/Product';
 //common
 export * from './furniture.module';

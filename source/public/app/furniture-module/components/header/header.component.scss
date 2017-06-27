@@ -47,4 +47,11 @@
     bottom: 110px;
     left: 130px;
   }
+
+  &__menu {
+    position: absolute;
+    top: 40px;
+    left: 90px;
+    z-index: 2;
+  }
 }

@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
+var http_1 = require("@angular/http");
 var furniture_routing_module_1 = require("./furniture-routing.module");
 var barrel = require("./index");
 var components = [
@@ -30,11 +31,12 @@ var FurnitureModule = (function () {
         core_1.NgModule({
             imports: [
                 common_1.CommonModule,
-                furniture_routing_module_1.FurnitureRoutingModule
+                http_1.HttpModule,
+                furniture_routing_module_1.FurnitureRoutingModule,
             ],
             declarations: components,
             exports: components,
-            providers: [barrel.DataService]
+            providers: [barrel.MenuService]
         })
     ], FurnitureModule);
     return FurnitureModule;

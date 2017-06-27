@@ -10,10 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var index_1 = require("../../index");
 var MenuComponent = (function () {
-    function MenuComponent() {
+    function MenuComponent(menuService) {
+        this.menuService = menuService;
+        this.menuOpen = false;
     }
     MenuComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.menuService.getMenuItems()
+            .subscribe(function (menuItems) { return _this.menuItems = menuItems; }, function (err) { return console.log(err); });
+    };
+    MenuComponent.prototype.toggleMenu = function () {
+        this.menuOpen = !this.menuOpen;
     };
     MenuComponent = __decorate([
         core_1.Component({
@@ -22,7 +31,7 @@ var MenuComponent = (function () {
             templateUrl: 'menu.component.html',
             styleUrls: ['menu.component.css']
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [index_1.MenuService])
     ], MenuComponent);
     return MenuComponent;
 }());

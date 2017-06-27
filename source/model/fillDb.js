@@ -188,27 +188,27 @@ const info = {
     ]
 };
 
-function fillDb() {
-    let promises = [];
+async function fillDb() {
+    //let promises = [];
     /*for (let i = 0; i < info.awards.length; i++) {
         promises.push(model.create(models.Award, info.awards[i]));
-    }
+    }*/
 
-    for (let i = 0; i < info.employee.length; i++) {
+    /*for (let i = 0; i < info.employee.length; i++) {
         promises.push(model.create(models.Employee, info.employee[i]));
-    }
+    }*/
 
-    for (let i = 0; i < info.menu.length; i++) {
-        promises.push(model.create(models.MenuItem, info.menu[i]));
-    }
+    /*for (let i = 0; i < info.menu.length; i++) {
+        await model.create(models.MenuItem, info.menu[i]);
+    }*/
 
-    for (let i = 0; i < info.news.length; i++) {
+    /*for (let i = 0; i < info.news.length; i++) {
         promises.push(model.create(models.News, info.news[i]));
     }*/
 
-    for (let i = 0; i < info.products.length; i++) {
-        promises.push(model.create(models.Product, info.products[i]));
-    }
+    /*for (let i = 0; i < info.products.length; i++) {
+        await model.create(models.Product, info.products[i]);
+    }*/
 
-    return Promise.all(promises);
+    //return Promise.all(promises);
 }

@@ -4,7 +4,7 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 //services
-__export(require("./services/data.service"));
+__export(require("./services/menu.service"));
 //components
 __export(require("./components/about-us/about-us.component"));
 __export(require("./components/footer/footer.component"));
@@ -19,6 +19,7 @@ __export(require("./components/basket/basket.component"));
 __export(require("./components/order/order.component"));
 //classes
 __export(require("./classes/News"));
+__export(require("./classes/Menu"));
 __export(require("./classes/Product"));
 //common
 __export(require("./furniture.module"));

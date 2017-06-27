@@ -1,5 +1,6 @@
 import { NgModule }     from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpModule }   from '@angular/http';
 
 import { FurnitureRoutingModule } from './furniture-routing.module';
 import * as barrel                from './index';
@@ -21,10 +22,11 @@ const components = [
 @NgModule({
     imports : [
         CommonModule,
-        FurnitureRoutingModule
+        HttpModule,
+        FurnitureRoutingModule,
     ],
     declarations : components,
     exports      : components,
-    providers    : [ barrel.DataService ]
+    providers    : [ barrel.MenuService ]
 })
-export class FurnitureModule { }
+export class FurnitureModule {  }

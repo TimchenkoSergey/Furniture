@@ -1,1 +1,13 @@
-<h1>menu</h1>
+<nav class="menu">
+    <button class="menu__open" (click)="toggleMenu()"></button>
+
+    <ul [ngClass]="{ 'menu__list': true, 'menu__list--visible': menuOpen }">
+        <li class="menu__item" *ngFor="let item of menuItems">
+            <a class="menu__link" routerLink='{{ item.link }}'>{{ item.text }}</a>
+        </li>
+
+        <li class="menu__item menu__item--padding">
+            <button class="menu__cross" (click)="toggleMenu()"></button>
+        </li>
+    </ul>
+</nav>

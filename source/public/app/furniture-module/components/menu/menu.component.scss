@@ -1,0 +1,95 @@
+.menu {
+  position: relative;
+
+  &__open {
+    display: block;
+    width: 125px;
+    height: 120px;
+
+    background: none;
+    background-image: url(img/menu-icon.png);
+    border: none;
+
+    box-shadow: none;
+    outline: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    height: 0px;
+    overflow: hidden;
+    display: flex;
+
+    list-style: none;
+    transition: 0.4s;
+    opacity: 0;
+
+    &--visible {
+      height: 120px;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    display: block;
+    height: 14px;
+    padding-top: 53px;
+    padding-bottom: 53px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    background-color: #f8c255;
+
+    &--padding {
+      padding-top: 43px;
+      padding-bottom: 44px;
+      height: 33px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 60px;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 14px;
+
+    transition: 0.3s;
+
+    &:hover {
+      color: #7acec3;
+    }
+  }
+
+  &__cross {
+    display: block;
+    width: 30px;
+    height: 33px;
+
+    background: none;
+    background-image: url(img/cross-icon.png);
+    border: none;
+
+    box-shadow: none;
+    outline: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
