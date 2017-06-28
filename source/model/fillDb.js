@@ -95,19 +95,6 @@ const info = {
             ]
         },
         {
-            name        : 'potter',
-            year        : 2011,
-            mainImgSrc  : '/public/img/product2.png',
-            type        : 'potter',
-            material    : 'plastic',
-            designer    : 'David Design',
-            price       : 140,
-            description : [
-                'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
-                'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
-            ]
-        },
-        {
             name        : 'tabano',
             year        : 2016,
             material    : 'B&B ITALIA',
@@ -141,6 +128,19 @@ const info = {
             type        : 'ARMchairs',
             designer    : 'Patrick Norguet',
             price       : 340,
+            description : [
+                'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
+                'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
+            ]
+        },
+        {
+            name        : 'potter',
+            year        : 2011,
+            mainImgSrc  : '/public/img/product2.png',
+            type        : 'potter',
+            material    : 'plastic',
+            designer    : 'David Design',
+            price       : 140,
             description : [
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. ',
                 'Maecenas imperdiet nisi lorem, sed fermentum tortor pretium eget. Sed mollis lacus quis nunc cursus cursus. Quisque et magna sit amet sapien fermentum scelerisque eu id massa. Mauris ornare massa vel mauris tempus, vitae tempus urna tincidunt. '
@@ -206,9 +206,9 @@ async function fillDb() {
         promises.push(model.create(models.News, info.news[i]));
     }*/
 
-    /*for (let i = 0; i < info.products.length; i++) {
+    for (let i = 0; i < info.products.length; i++) {
         await model.create(models.Product, info.products[i]);
-    }*/
+    }
 
     //return Promise.all(promises);
 }

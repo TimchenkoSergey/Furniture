@@ -5,6 +5,8 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 //services
 __export(require("./services/menu.service"));
+__export(require("./services/products.service"));
+__export(require("./services/products-resolve.service"));
 //components
 __export(require("./components/about-us/about-us.component"));
 __export(require("./components/footer/footer.component"));

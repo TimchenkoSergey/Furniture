@@ -10,27 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var ProductListComponent = (function () {
-    function ProductListComponent(activatedRoute) {
-        this.activatedRoute = activatedRoute;
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
+var ProductsService = (function () {
+    function ProductsService(http) {
+        this.http = http;
+        this._productsUrl = '/product';
     }
-    ProductListComponent.prototype.ngOnInit = function () {
+    ProductsService.prototype.getProducts = function () {
         var _this = this;
-        this.activatedRoute.data.forEach(function (data) {
-            _this.productList = data.products;
+        return this.http
+            .get(this._productsUrl)
+            .map(function (response) {
+            _this._products = response.json();
+            return _this._products;
         });
     };
-    ProductListComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'product-list',
-            templateUrl: 'product-list.component.html',
-            styleUrls: ['product-list.component.css']
-        }),
-        __metadata("design:paramtypes", [router_1.ActivatedRoute])
-    ], ProductListComponent);
-    return ProductListComponent;
+    ProductsService.prototype.getProductById = function (id) {
+        return this._products.find(function (product) { return product._id === id; });
+    };
+    ProductsService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.Http])
+    ], ProductsService);
+    return ProductsService;
 }());
-exports.ProductListComponent = ProductListComponent;
-//# sourceMappingURL=product-list.component.js.map
+exports.ProductsService = ProductsService;
+//# sourceMappingURL=products.service.js.map

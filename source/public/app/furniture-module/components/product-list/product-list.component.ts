@@ -2,6 +2,7 @@ import {
     Component,
     OnInit
 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { Product } from '../../index';
 
@@ -14,11 +15,11 @@ import { Product } from '../../index';
 export class ProductListComponent implements OnInit{
     productList : Product[];
 
-    constructor() {
-
-    }
+    constructor(private activatedRoute : ActivatedRoute) {  }
 
     ngOnInit() {
-
+        this.activatedRoute.data.forEach((data : { products : Product[] }) => {
+            this.productList = data.products;
+        });
     }
 }

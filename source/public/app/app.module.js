@@ -24,7 +24,8 @@ var AppModule = (function () {
                 app_routing_module_1.AppRoutingModule
             ],
             declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [app_component_1.AppComponent],
+            providers: [index_1.ProductsResolve]
         })
     ], AppModule);
     return AppModule;

@@ -16,7 +16,13 @@ var AppRoutingModule = (function () {
         core_1.NgModule({
             imports: [
                 router_1.RouterModule.forRoot([
-                    { path: 'product-list', component: index_1.ProductListComponent },
+                    {
+                        path: 'product-list',
+                        component: index_1.ProductListComponent,
+                        resolve: {
+                            products: index_1.ProductsResolve
+                        }
+                    },
                     {
                         path: '',
                         redirectTo: 'product-list',

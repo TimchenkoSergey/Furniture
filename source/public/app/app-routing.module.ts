@@ -1,12 +1,21 @@
 import { NgModule }     from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { ProductListComponent } from './furniture-module/index';
+import {
+    ProductListComponent,
+    ProductsResolve
+} from './furniture-module/index';
 
 @NgModule({
     imports : [
         RouterModule.forRoot([
-            { path : 'product-list', component : ProductListComponent },
+            {
+                path : 'product-list',
+                component : ProductListComponent,
+                resolve : {
+                    products : ProductsResolve
+                }
+            },
             {
                 path : '',
                 redirectTo : 'product-list',

@@ -36,7 +36,10 @@ var FurnitureModule = (function () {
             ],
             declarations: components,
             exports: components,
-            providers: [barrel.MenuService]
+            providers: [
+                barrel.MenuService,
+                barrel.ProductsService
+            ]
         })
     ], FurnitureModule);
     return FurnitureModule;

@@ -3,7 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }     from './app.component';
-import { FurnitureModule }  from './furniture-module/index';
+import {
+    FurnitureModule,
+    ProductsResolve
+}  from './furniture-module/index';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -15,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
         AppRoutingModule
     ],
     declarations : [ AppComponent ],
-    bootstrap    : [ AppComponent ]
+    bootstrap    : [ AppComponent ],
+    providers    : [ ProductsResolve ]
 })
 export class AppModule {
     

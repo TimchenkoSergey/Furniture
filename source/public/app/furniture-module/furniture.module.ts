@@ -27,6 +27,9 @@ const components = [
     ],
     declarations : components,
     exports      : components,
-    providers    : [ barrel.MenuService ]
+    providers    : [
+        barrel.MenuService,
+        barrel.ProductsService
+    ]
 })
 export class FurnitureModule {  }

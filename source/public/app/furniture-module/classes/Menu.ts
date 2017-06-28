@@ -8,6 +8,5 @@ export class Menu {
     }
 
     get text() : string { return this._text; }
-
     get link() : string { return this._link; }
 }

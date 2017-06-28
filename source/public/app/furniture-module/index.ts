@@ -1,5 +1,7 @@
 //services
 export * from './services/menu.service';
+export * from './services/products.service';
+export * from './services/products-resolve.service';
 //components
 export * from './components/about-us/about-us.component';
 export * from './components/footer/footer.component';
