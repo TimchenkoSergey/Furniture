@@ -14,6 +14,7 @@ export * from './components/product/product.component';
 export * from './components/product-list/product-list.component';
 export * from './components/basket/basket.component';
 export * from './components/order/order.component';
+export * from './components/product-description/product-description.component';
 //classes
 export * from './classes/News';
 export * from './classes/Menu';

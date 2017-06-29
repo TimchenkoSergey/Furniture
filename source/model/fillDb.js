@@ -84,7 +84,7 @@ const info = {
         {
             name        : 'FONDUE',
             year        : 2014,
-            mainImgSrc  : '/public/img/product1.png',
+            mainImgSrc  : 'img/product1.png',
             material    : 'Glass and Metal',
             type        : 'Suspension lamp',
             designer    : 'David Design',
@@ -98,7 +98,7 @@ const info = {
             name        : 'tabano',
             year        : 2016,
             material    : 'B&B ITALIA',
-            mainImgSrc  : '/public/img/product3.png',
+            mainImgSrc  : 'img/product3.png',
             type        : 'Armchairs',
             designer    : 'PATRICIA URQUIOLA',
             price       : 230,
@@ -111,7 +111,7 @@ const info = {
             name: 'louis xx',
             year: 2017,
             material: 'metal, plastic',
-            mainImgSrc: '/public/img/product4.png',
+            mainImgSrc: 'img/product4.png',
             type: 'chairs',
             designer: 'philippe starck',
             price       : 1230,
@@ -124,7 +124,7 @@ const info = {
             name        : '395-396 P22',
             year        : 2012,
             material    : 'skin',
-            mainImgSrc  : '/public/img/product5.png',
+            mainImgSrc  : 'img/product5.png',
             type        : 'ARMchairs',
             designer    : 'Patrick Norguet',
             price       : 340,
@@ -136,7 +136,7 @@ const info = {
         {
             name        : 'potter',
             year        : 2011,
-            mainImgSrc  : '/public/img/product2.png',
+            mainImgSrc  : 'img/product2.png',
             type        : 'potter',
             material    : 'plastic',
             designer    : 'David Design',
@@ -150,7 +150,7 @@ const info = {
             name        : 'FIJI',
             year        : 2015,
             material    : 'skin',
-            mainImgSrc  : '/public/img/product6.png',
+            mainImgSrc  : 'img/product6.png',
             type        : 'armchairs',
             designer    : 'Cuno Frommherz',
             price       : 240,
@@ -163,7 +163,7 @@ const info = {
             name        : 'Sesann',
             year        : 2016,
             material    : 'skin',
-            mainImgSrc  : '/public/img/product7.png',
+            mainImgSrc  : 'img/product7.png',
             type        : 'armchairs',
             designer    : 'Gianfranco Frattini',
             price       : 450,
@@ -176,7 +176,7 @@ const info = {
             name        : 'Alessi',
             year        : 2017,
             material    : 'metal',
-            mainImgSrc  : '/public/img/product8.png',
+            mainImgSrc  : 'img/product8.png',
             type        : 'Alessi',
             price       : 340,
             designer    : 'Piero Lissoni',
@@ -206,9 +206,9 @@ async function fillDb() {
         promises.push(model.create(models.News, info.news[i]));
     }*/
 
-    for (let i = 0; i < info.products.length; i++) {
+    /*for (let i = 0; i < info.products.length; i++) {
         await model.create(models.Product, info.products[i]);
-    }
+    }*/
 
     //return Promise.all(promises);
 }

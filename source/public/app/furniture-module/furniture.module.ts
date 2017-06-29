@@ -16,7 +16,8 @@ const components = [
     barrel.ProductComponent,
     barrel.ProductListComponent,
     barrel.OrderComponent,
-    barrel.BasketComponent
+    barrel.BasketComponent,
+    barrel.ProductDescriptionComponent
 ];
 
 @NgModule({

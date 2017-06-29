@@ -22,7 +22,8 @@ var components = [
     barrel.ProductComponent,
     barrel.ProductListComponent,
     barrel.OrderComponent,
-    barrel.BasketComponent
+    barrel.BasketComponent,
+    barrel.ProductDescriptionComponent
 ];
 var FurnitureModule = (function () {
     function FurnitureModule() {

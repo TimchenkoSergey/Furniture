@@ -1,7 +1,74 @@
 <div class="product-list">
 
     <div class="product-list__first-line">
+        <div class="product-list__title-wrap">
+            <h2 class="product-list__title">
+                Projects
+            </h2>
+            <img class="product-list__line" src="img/white-line.png" alt="line">
+        </div>
+        <div class="product-list__product-one"
+             [ngStyle]="{ 'background-image' : 'url(' + productList[0].mainImgSrc + ')' }">
+            <div class="product-list__one-text">
+                <product-description [product]="productList[0]"></product-description>
+            </div>
+        </div>
+        <div class="product-list__product-two"
+             [ngStyle]="{ 'background-image' : 'url(' + productList[1].mainImgSrc + ')' }">
+            <div class="product-list__two-text">
+                <product-description [product]="productList[1]"></product-description>
+            </div>
+        </div>
+    </div>
 
+    <div class="product-list__second-line">
+        <div class="product-list__product-three"
+             [ngStyle]="{ 'background-image' : 'url(' + productList[2].mainImgSrc + ')' }">
+            <div class="product-list__three-text">
+                <product-description [product]="productList[2]" [white]="true"></product-description>
+            </div>
+        </div>
+        <div class="product-list__product-four"
+             [ngStyle]="{ 'background-image' : 'url(' + productList[3].mainImgSrc + ')' }">
+            <div class="product-list__four-text">
+                <product-description [product]="productList[3]"></product-description>
+            </div>
+        </div>
+        <div class="product-list__double">
+            <div class="product-list__product-five"
+                 [ngStyle]="{ 'background-image' : 'url(' + productList[4].mainImgSrc + ')' }">
+                <div class="product-list__five-text">
+                    <product-description [product]="productList[4]"></product-description>
+                </div>
+            </div>
+            <div class="product-list__product-six"
+                 [ngStyle]="{ 'background-image' : 'url(' + productList[5].mainImgSrc + ')' }">
+                <div class="product-list__six-text">
+                    <product-description [product]="productList[5]"></product-description>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-list__third-line">
+        <div class="product-list__product-seven"
+             [ngStyle]="{ 'background-image' : 'url(' + productList[6].mainImgSrc + ')' }">
+            <div class="product-list__seven-text">
+                <product-description [product]="productList[6]"></product-description>
+            </div>
+        </div>
+        <div class="product-list__product-eight"
+             [ngStyle]="{ 'background-image' : 'url(' + productList[7].mainImgSrc + ')' }">
+            <div class="product-list__eight-text">
+                <product-description [product]="productList[7]"></product-description>
+            </div>
+        </div>
+        <div class="product-list__furniture">
+            <h2 class="product-list__furniture-text">
+                Furniture
+            </h2>
+            <img class="product-list__line" src="img/white-line.png" alt="line">
+        </div>
     </div>
 
 </div>

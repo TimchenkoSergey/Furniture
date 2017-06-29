@@ -1,0 +1,29 @@
+<div class="product-description">
+    <h3 class="product-description__name">
+        <a class="product-description__link"
+           routerLink="/product/{{ product._id }}"
+            [class.product-description__white]="white">
+            {{ product.name }}
+        </a>
+    </h3>
+    <p class="product-description__text" [class.product-description__white]="white">
+        <span class="product-description__bold" [class.product-description__white]="white">year:</span>
+        {{ product.year }}
+    </p>
+    <p class="product-description__text" [class.product-description__white]="white">
+        <span class="product-description__bold" [class.product-description__white]="white">material:</span>
+        {{ product.material }}
+    </p>
+    <p class="product-description__text" [class.product-description__white]="white">
+        <span class="product-description__bold" [class.product-description__white]="white">type:</span>
+        {{ product.type }}
+    </p>
+    <p class="product-description__text" [class.product-description__white]="white">
+        <span class="product-description__bold" [class.product-description__white]="white">designer:</span>
+        {{ product.designer }}
+    </p>
+    <p class="product-description__text" [class.product-description__white]="white">
+        <span class="product-description__bold" [class.product-description__white]="white">price:</span>
+        {{ product.price }} $
+    </p>
+</div>

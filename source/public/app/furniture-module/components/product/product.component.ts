@@ -8,7 +8,10 @@ import {
     Params
 } from '@angular/router';
 
-import { Product } from '../../index';
+import {
+    Product,
+    ProductsService
+} from '../../index';
 
 @Component({
     moduleId    : module.id,
@@ -18,19 +21,26 @@ import { Product } from '../../index';
 })
 export class ProductComponent implements OnInit {
     product   : Product;
-    productId : number;
+    productId : string;
 
-    constructor(private router : Router, private activatedRoute : ActivatedRoute) {
-
-    }
+    constructor(
+        private router : Router,
+        private activatedRoute : ActivatedRoute,
+        private productsService : ProductsService
+    ) {  }
 
     ngOnInit() {
         this.activatedRoute.params.forEach((param : Params) => {
-            this.productId = +param['id'];
+            this.productId = param['id'];
+            this.product   = this.productsService.getProductById(this.productId);
         });
     }
 
     goToProductList() {
         this.router.navigate(['/product-list']);
+    }
+
+    buyProduct() {
+
     }
 }

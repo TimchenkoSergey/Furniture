@@ -19,6 +19,7 @@ __export(require("./components/product/product.component"));
 __export(require("./components/product-list/product-list.component"));
 __export(require("./components/basket/basket.component"));
 __export(require("./components/order/order.component"));
+__export(require("./components/product-description/product-description.component"));
 //classes
 __export(require("./classes/News"));
 __export(require("./classes/Menu"));
